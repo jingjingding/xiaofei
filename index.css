@@ -1,0 +1,272 @@
+<<<<<<< HEAD
+html {
+  font-size:75px;
+}
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+  }
+  /* *是通配符，给所有的元素去掉默认样式，因为有的浏览器会默认加上一些样式，这可能会给布局带来问题 */
+  body{
+   width: 100%;
+   height: 100%;
+  }
+  /* 给body设置100%的高度和宽度，这样就会根据浏览器屏幕大小自动适配 */
+  #container{
+   position: relative; 
+   width: 100%;
+   margin: 0 auto;
+   margin-top: 100px;
+   border-radius: 1px;
+  }
+  /* 这是包裹所有元素的DIV，给他设置620px的宽和450px的高，这个大小可以设置为更大，但是不能小，至少要能包含里面所有的元素 */
+  #game{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 9rem;
+   height: 9rem;  
+  }
+  /* 这是游戏区的DIV，这个大小是计算出来的，取决于你的小方块的大小。这里我们设置小方块的大小为150px 150px，所以这个大小是150px*3，为450px */
+  #game div{
+   position: absolute;
+   width: 3rem;
+   height: 3rem;  
+   cursor: pointer;
+   -webkit-transition: 0.1s;/*浏览器前缀，兼容其他浏览器 chrome*/
+  -moz-transition: 0.1s;/*firefox*/
+    -ms-transition: 0.1s;/*ie*/
+     -o-transition: 0.1s;/*opera*/
+     transition: 0.1s;
+  }
+  #game div img {
+    width: 100%;
+    height: 100%;
+  }
+  /* 这就是小方块的大小了，定位为绝对定位，这样改变位置不会影响其他元素的位置。宽高都是149px。注意了，我们还设置了box-shadow:1px 1px 2px #777 ；
+  它还有边框阴影，所以149px 加上边框1px，它的总宽度是150px 下面的transition：0.3s是设置过渡时间，这是css3的属性，它会让属性改变呈现过渡动画，所以
+  当我们改变方块的位置时，它会有一个动画，我们不必自己编写动画函数，这回让你疯狂*/
+  #game div:hover{
+   color: #ffe171; 
+  }
+  /*给方块设置鼠标悬停动画，当鼠标悬停在元素上面时，会用这里的属性替换上面的属性，移开后又会变为原来的，这里我们是把字体颜色改变*/
+  #control{
+   width: 100%;  
+   text-align: center;
+   position: absolute;
+   top: 10rem;
+  }
+  /*控制区，display:inline-block会让元素呈现块状元素的特性，使得可以改变大小，同时也会具有行内元素的特性，使得不会占据一行空间，float:right让元素浮动到右边*/
+  #control rowspan{
+   height: 1rem; 
+   font-size: 0.5rem;
+   color: #222;
+   margin-top: 10px;
+  }
+  /*设置控制区按钮的共同样式*/
+  #start{
+   display: inline-block;
+   font-size: .5rem;
+   width: 2rem;
+   height: 1rem;
+   line-height: 1rem;
+   background-color: #20a6fa;
+   color: #ffe171; 
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #4c98f5;
+   text-align: center;
+   cursor: pointer;
+  }
+  /*给start按钮设置属性。cursor:pointer属性让鼠标移到元素上面时会显示不同的鼠标形状，pointer是手型*/
+  #reset{
+   display: inline-block;
+   font-size: .5rem;
+   width: 2rem;
+   height: 1rem;
+   line-height: 1rem;
+   background-color: #20a6fa;
+   color: #ffe171; 
+   border-radius: 5px;/*圆角属性*/
+   box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+   text-align: center;/*文字居中*/
+   cursor: pointer;
+  }
+  #change {
+    display: inline-block;
+    font-size: .5rem;
+    width: 2rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #20a6fa;
+    color: #ffe171; 
+    border-radius: 5px;/*圆角属性*/
+    box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+    text-align: center;/*文字居中*/
+    cursor: pointer;
+  }
+  /*给Reset按钮设置属性*/
+  #d1{
+   left: 0px;
+  }
+  #d2{
+   left: 3rem;
+  }
+  #d3{
+   left: 6rem;
+  }
+  #d4{
+   top: 3rem;
+  }
+  #d5{
+   top: 3rem;
+   left: 3rem;
+  }
+  #d6{
+   top: 3rem;
+   left: 6rem;
+  }
+  #d7{
+   top: 6rem;
+  }
+  #d8{
+   left: 3rem;
+   top: 6rem;
+  }
+=======
+html {
+  font-size:75px;
+}
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+  }
+  /* *是通配符，给所有的元素去掉默认样式，因为有的浏览器会默认加上一些样式，这可能会给布局带来问题 */
+  body{
+   width: 100%;
+   height: 100%;
+  }
+  /* 给body设置100%的高度和宽度，这样就会根据浏览器屏幕大小自动适配 */
+  #container{
+   position: relative; 
+   width: 100%;
+   margin: 0 auto;
+   margin-top: 100px;
+   border-radius: 1px;
+  }
+  /* 这是包裹所有元素的DIV，给他设置620px的宽和450px的高，这个大小可以设置为更大，但是不能小，至少要能包含里面所有的元素 */
+  #game{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 9rem;
+   height: 9rem;  
+  }
+  /* 这是游戏区的DIV，这个大小是计算出来的，取决于你的小方块的大小。这里我们设置小方块的大小为150px 150px，所以这个大小是150px*3，为450px */
+  #game div{
+   position: absolute;
+   width: 3rem;
+   height: 3rem;  
+   cursor: pointer;
+   -webkit-transition: 0.1s;/*浏览器前缀，兼容其他浏览器 chrome*/
+  -moz-transition: 0.1s;/*firefox*/
+    -ms-transition: 0.1s;/*ie*/
+     -o-transition: 0.1s;/*opera*/
+     transition: 0.1s;
+  }
+  #game div img {
+    width: 100%;
+    height: 100%;
+  }
+  /* 这就是小方块的大小了，定位为绝对定位，这样改变位置不会影响其他元素的位置。宽高都是149px。注意了，我们还设置了box-shadow:1px 1px 2px #777 ；
+  它还有边框阴影，所以149px 加上边框1px，它的总宽度是150px 下面的transition：0.3s是设置过渡时间，这是css3的属性，它会让属性改变呈现过渡动画，所以
+  当我们改变方块的位置时，它会有一个动画，我们不必自己编写动画函数，这回让你疯狂*/
+  #game div:hover{
+   color: #ffe171; 
+  }
+  /*给方块设置鼠标悬停动画，当鼠标悬停在元素上面时，会用这里的属性替换上面的属性，移开后又会变为原来的，这里我们是把字体颜色改变*/
+  #control{
+   width: 100%;  
+   text-align: center;
+   position: absolute;
+   top: 10rem;
+  }
+  /*控制区，display:inline-block会让元素呈现块状元素的特性，使得可以改变大小，同时也会具有行内元素的特性，使得不会占据一行空间，float:right让元素浮动到右边*/
+  #control rowspan{
+   height: 1rem; 
+   font-size: 0.5rem;
+   color: #222;
+   margin-top: 10px;
+  }
+  /*设置控制区按钮的共同样式*/
+  #start{
+   display: inline-block;
+   font-size: .5rem;
+   width: 2rem;
+   height: 1rem;
+   line-height: 1rem;
+   background-color: #20a6fa;
+   color: #ffe171; 
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #4c98f5;
+   text-align: center;
+   cursor: pointer;
+  }
+  /*给start按钮设置属性。cursor:pointer属性让鼠标移到元素上面时会显示不同的鼠标形状，pointer是手型*/
+  #reset{
+   display: inline-block;
+   font-size: .5rem;
+   width: 2rem;
+   height: 1rem;
+   line-height: 1rem;
+   background-color: #20a6fa;
+   color: #ffe171; 
+   border-radius: 5px;/*圆角属性*/
+   box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+   text-align: center;/*文字居中*/
+   cursor: pointer;
+  }
+  #change {
+    display: inline-block;
+    font-size: .5rem;
+    width: 2rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #20a6fa;
+    color: #ffe171; 
+    border-radius: 5px;/*圆角属性*/
+    box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+    text-align: center;/*文字居中*/
+    cursor: pointer;
+  }
+  /*给Reset按钮设置属性*/
+  #d1{
+   left: 0px;
+  }
+  #d2{
+   left: 3rem;
+  }
+  #d3{
+   left: 6rem;
+  }
+  #d4{
+   top: 3rem;
+  }
+  #d5{
+   top: 3rem;
+   left: 3rem;
+  }
+  #d6{
+   top: 3rem;
+   left: 6rem;
+  }
+  #d7{
+   top: 6rem;
+  }
+  #d8{
+   left: 3rem;
+   top: 6rem;
+  }
+>>>>>>> a9af1bf37cc07924367647e1ee01659bb82e78dc
+  /*这是预先给每个小方块按照顺序排好位置*/
