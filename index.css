@@ -19,6 +19,19 @@ html {
    margin-top: 100px;
    border-radius: 1px;
   }
+  #success {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    
+  }
+  #success img {
+    width: 100%;
+    height: 100%;
+  }
   /* 这是包裹所有元素的DIV，给他设置620px的宽和450px的高，这个大小可以设置为更大，但是不能小，至少要能包含里面所有的元素 */
   #game{
    position: absolute;

@@ -10,10 +10,9 @@
 <body> 
  <div id="container"> 
     <div id="control">
-    <!--游戏控制区-->
       <p>
-      <rowspan id="timeText">总用时</rowspan>
-      <rowspan id="timer"></rowspan>
+        <rowspan id="timeText">总用时</rowspan>
+        <rowspan id="timer"></rowspan>
       </p>
       <!--显示游戏时间区域-->
       <p>
@@ -33,7 +32,9 @@
    <div id="d7" onclick="move(7)"><img class='img' src="./images/xiaofei7.png"></div>
    <div id="d8" onclick="move(8)"><img class='img' src="./images/xiaofei8.png"></div> 
   </div>
- 
+  <div id="success">
+    <img src="./images/success.gif" alt="">
+  </div>
  </div>
  <script>
   var time=0; //保存定时时间
@@ -101,7 +102,7 @@
    if(finish_flag==true){
     if(!pause)
       start();
-      alert("congratulation");
+      document.getElementById('success').style.display = 'block';
    }
    //如果为true，则表示游戏完成，如果当前没有暂停，则调用暂停韩式，并且弹出提示框，完成游戏。
    //start()这个函数是开始，暂停一起的函数，如果暂停，调用后会开始，如果开始，则调用后会暂停
@@ -147,6 +148,7 @@
   }
   //重置函数
   function reset(){ 
+   document.getElementById('success').style.display = 'none';
    time=0;//把时间设置为0
    random_d();//把方块随机打乱函数
    if(pause)//如果暂停，则开始计时 
